@@ -27,9 +27,26 @@ const game = {
     }
   };
 
+game.play()
 var input = ''
+var guesses = []
+var count = 0
 
-while (input !== 'quit') {
-    input = prompt('Enter a number or "quit": ')
+while (input !== 'q') {
+    console.log(game.secretNum)
+    input = prompt('Enter a number or "Q": ')
+    guesses.push(input)
+    console.log(guesses)
+
+    if (input > game.secretNum) {
+        count += 1
+        alert(`Too high\n` + 'Guesses: ' + guesses)
+    } else if (input < game.secretNum) {
+        count += 1
+        alert(`Too low\n` + 'Guesses: ' + guesses)
+    } else if (input == game.secretNum) {
+        alert(`Congratulations! You won in ${count} guesses.`)
+        break
+    }
 }
-console.log(game.play)
+
