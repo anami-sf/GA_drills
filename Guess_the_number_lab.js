@@ -36,10 +36,10 @@ const game = {
         (this.biggestNum - this.smallestNum + 1)) + this.smallestNum;
     },
     getGuess: function(){
-        const guess = prompt(`Enter a guess between ${this.smallestNum} and ${this.biggestNum} or "q": `)
+        const guess = prompt(`Enter a guess between ${this.smallestNum} and ${this.biggestNum} or "Quit": `)
         console.log(typeof guess)
-        if (guess === "q") {
-            return guess
+        if (guess === 'Quit') {
+            return guess.toLocaleLowerCase()
         } else {
             return parseInt(guess)
         }
@@ -52,7 +52,7 @@ const game = {
             alert(`Your guess is too low\n` + 'Previous guesses: ' + game.prevGuesses)
         } else if (input === game.secretNum) {
             alert(`Congratulations! You won in ${game.prevGuesses.length} guesses.`)
-        } else if (input === 'q') {
+        } else if (input === 'quit') {
             alert('Goodbye!')
         } else {
             alert('Invalid input')
@@ -62,7 +62,7 @@ const game = {
         game.generateSecretNum()
         console.log(game.secretNum)
         let guess = null
-        while (guess !== 'q' && guess !== game.secretNum) {
+        while (guess !== 'quit' && guess !== game.secretNum) {
             guess = this.getGuess()
             game.prevGuesses.push(guess)
             game.render(guess)
