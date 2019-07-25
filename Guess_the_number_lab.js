@@ -27,7 +27,7 @@ const game = {
     setRange: function(){ 
         const smallNum = prompt('Enter smallest number: ')
         const bigNum = prompt('Enter biggest number: ');
-        game.smallestNum = parseInt(smallNum)
+        this.smallestNum = parseInt(smallNum)
         this.biggestNum = parseInt(bigNum)
     },
     generateSecretNum: function( ){
@@ -46,12 +46,12 @@ const game = {
         
     },
     render: function(input) {
-        if (input > game.secretNum && input <= game.biggestNum) {
-            alert(`Your guess is too high\n` + 'Previous guesses: ' + game.prevGuesses)
-        } else if (input < game.secretNum && input >= game.smallestNum) {
-            alert(`Your guess is too low\n` + 'Previous guesses: ' + game.prevGuesses)
-        } else if (input === game.secretNum) {
-            alert(`Congratulations! You won in ${game.prevGuesses.length} guesses.`)
+        if (input > this.secretNum && input <= this.biggestNum) {
+            alert(`Your guess is too high\n` + 'Previous guesses: ' + this.prevGuesses)
+        } else if (input < this.secretNum && input >= this.smallestNum) {
+            alert(`Your guess is too low\n` + 'Previous guesses: ' + this.prevGuesses)
+        } else if (input === this.secretNum) {
+            alert(`Congratulations! You won in ${this.prevGuesses.length} guesses.`)
         } else if (input === 'quit') {
             alert('Goodbye!')
         } else {
@@ -59,13 +59,13 @@ const game = {
         }
     },
     play: function() {
-        game.generateSecretNum()
-        console.log(game.secretNum)
+        this.generateSecretNum()
+        console.log(this.secretNum)
         let guess = null
-        while (guess !== 'quit' && guess !== game.secretNum) {
+        while (guess !== 'quit' && guess !== this.secretNum) {
             guess = this.getGuess()
-            game.prevGuesses.push(guess)
-            game.render(guess)
+            this.prevGuesses.push(guess)
+            this.render(guess)
         }
     },
   };
