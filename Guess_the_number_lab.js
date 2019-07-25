@@ -36,10 +36,10 @@ const game = {
         (this.biggestNum - this.smallestNum + 1)) + this.smallestNum;
     },
     getGuess: function(){
-        const guess = prompt(`Enter a guess between ${this.smallestNum} and ${this.biggestNum} or "Quit": `)
+        let guess = prompt(`Enter a guess between ${this.smallestNum} and ${this.biggestNum} or "Quit": `)
         console.log(typeof guess)
-        if (guess === 'Quit') {
-            return guess.toLocaleLowerCase()
+        if (guess === 'quit' || guess === 'Quit') {
+            return 'quit'
         } else {
             return parseInt(guess)
         }
