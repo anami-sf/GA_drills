@@ -34,7 +34,7 @@ const game = {
     }
   };
 
-cgame.play()
+game.play()
 console.log(game.prevGuesses)
 //console.log(game.getGuess())
 
