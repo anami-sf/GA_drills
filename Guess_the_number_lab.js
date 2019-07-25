@@ -46,16 +46,16 @@ const game = {
         
     },
     render: function(input) {
-        if (input > game.secretNum) {
+        if (input > game.secretNum && input < game.biggestNum) {
             alert(`Your guess is too high\n` + 'Previous guesses: ' + game.prevGuesses)
-        } else if (input < game.secretNum) {
+        } else if (input < game.secretNum && inpu > this.smallestNum) {
             alert(`Your guess is too low\n` + 'Previous guesses: ' + game.prevGuesses)
-        } else if (input == game.secretNum) {
+        } else if (input === game.secretNum) {
             alert(`Congratulations! You won in ${game.prevGuesses.length} guesses.`)
         } else if (input === 'q') {
             alert('Goodbye!')
         } else {
-            alert('Invalid input') //updated
+            alert('Invalid input')
         }
     },
     play: function() {
