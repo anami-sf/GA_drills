@@ -23,8 +23,10 @@ const game = {
     secretNum: null,
     prevGuesses: [],
     play: function() {
-      this.secretNum = Math.floor(Math.random() * 
+        this.secretNum = Math.floor(Math.random() * 
         (this.biggestNum - this.smallestNum + 1)) + this.smallestNum;
+
+        this.prevGuesses.push( this.getGuess() )
     },
     getGuess: function(){
         const guess = prompt(`Enter a guess between ${this.smallestNum} and ${this.biggestNum}: `)
@@ -32,8 +34,9 @@ const game = {
     }
   };
 
-//game.play()
-console.log(game.getGuess())
+cgame.play()
+console.log(game.prevGuesses)
+//console.log(game.getGuess())
 
 var input = ''
 var guesses = []
