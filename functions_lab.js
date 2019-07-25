@@ -1,7 +1,7 @@
 
 // Define a function, as a function declaration, maxOfTwoNumbers that takes two numbers as arguments and returns the largest of them. If they are the same, return that number. Use the if-else construct or a ternary expression - the Math.max method is not allowed.
 
-function maxOfTwoNumbers(n1, n2) {
+/* function maxOfTwoNumbers(n1, n2) {
     if (n1 >= n2) {
         return n1
     } else {
@@ -10,9 +10,22 @@ function maxOfTwoNumbers(n1, n2) {
 }
 
 console.log(maxOfTwoNumbers(3, 4))
-console.log(maxOfTwoNumbers(5, 3))
+console.log(maxOfTwoNumbers(5, 3)) */
 
 // Define a function, as a function expression, maxOfThree that takes three numbers as arguments and returns the largest of them. Again, the Math.max method is not allowed.
+
+let largest;
+
+const maxOfThree = function (num1, num2, num3) {
+    (num1 > num2) ? largest = num1 : largest = num2;
+    (num3 > largest) ? largest = num3 : largest;
+    return largest
+}
+
+console.log(maxOfThree(2, 3, 4))
+console.log(maxOfThree(5, 3, 4))
+console.log(maxOfThree(2, 8, 4))
+
 
 
 /* Define a function, as a function declaration, isCharAVowel that takes a character as an argument and returns true if it is a vowel, false otherwise. */
