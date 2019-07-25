@@ -46,9 +46,9 @@ const game = {
         
     },
     render: function(input) {
-        if (input > game.secretNum && input < game.biggestNum) {
+        if (input > game.secretNum && input <= game.biggestNum) {
             alert(`Your guess is too high\n` + 'Previous guesses: ' + game.prevGuesses)
-        } else if (input < game.secretNum && inpu > this.smallestNum) {
+        } else if (input < game.secretNum && input >= game.smallestNum) {
             alert(`Your guess is too low\n` + 'Previous guesses: ' + game.prevGuesses)
         } else if (input === game.secretNum) {
             alert(`Congratulations! You won in ${game.prevGuesses.length} guesses.`)
