@@ -53,6 +53,15 @@ console.log(sumArray([3, 4, 5]))
 
 /* Define a function, as a function declaration, multiplyArray that takes an array of numbers and returns the product those numbers. For example, multiplyArray([2, 4, 5]); would return 40. */
 
+function multiplyArray(arr) {
+    const total = arr.reduce((accumulator, num) => {
+        return accumulator*num;
+    }, 1)
+    return total
+}
+
+console.log(multiplyArray([1,2, 3]))
+
 /* Define a function, as a function expression, numArgs that returns the number of arguments passed to the function when called. */
 
 /* Define a function, as a function declaration, reverseString that takes a string, reverses the characters, and returns it. For example, reverseString('rockstar'); would return the string "ratskcor". */
