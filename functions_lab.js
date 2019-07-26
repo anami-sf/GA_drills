@@ -48,7 +48,7 @@ const sumArray = function (arr){
     }, 0)
     return total
 }
-console.log(sumArray([3, 4, 5]))
+console.log('sumArray: ' + sumArray([3, 4, 5]))
 
 
 /* Define a function, as a function declaration, multiplyArray that takes an array of numbers and returns the product those numbers. For example, multiplyArray([2, 4, 5]); would return 40. */
@@ -60,11 +60,34 @@ function multiplyArray(arr) {
     return total
 }
 
-console.log(multiplyArray([1,2, 3]))
+console.log('multiplyArray:' + multiplyArray([1,2, 3]))
 
 /* Define a function, as a function expression, numArgs that returns the number of arguments passed to the function when called. */
 
+const numArgs = function(...arguments){
+    return arguments.length
+}
+
+console.log('numArgs: ' + numArgs(1, 2, 3))
+
 /* Define a function, as a function declaration, reverseString that takes a string, reverses the characters, and returns it. For example, reverseString('rockstar'); would return the string "ratskcor". */
+
+
+
+function reverseString(str) {
+    var newStr = []
+    str = str.split('')
+    console.log(str)
+
+    while (str.length > 0) {      
+        let last = str.pop()
+        newStr.push(last)
+        console.log(last, newStr)
+    }
+    return newStr.join("")
+}
+
+console.log('reverseString: ' + reverseString('hello'))
 
 /* Define a function, as a function expression, longestStringInArray that takes an array of strings as an argument and returns the length of the longest string. */
 
