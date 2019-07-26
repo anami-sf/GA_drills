@@ -30,11 +30,8 @@ console.log(maxOfThree(2, 8, 4))
 
 /* Define a function, as a function declaration, isCharAVowel that takes a character as an argument and returns true if it is a vowel, false otherwise. */
 
-const vowels = 'aeiou'
-
 function isCharAVowel (char) {
-    //vowels = vowels.split(',')
-    
+    const vowels = 'aeiou'
     for(vowel of vowels) {
         return (char === vowel?true:false)
     }
@@ -43,6 +40,16 @@ console.log(isCharAVowel('a'))
 console.log(isCharAVowel('y'))
 
 /* Define a function, as a function expression, sumArray that takes an array of numbers and returns the sum of those numbers. For example, sumArray([2, 4, 5]); would return 11. */
+
+const sumArray = function (arr){
+    const total = arr.reduce((accumulator, num) => {
+        console.log(accumulator, num)
+        return accumulator + num;
+    }, 0)
+    return total
+}
+console.log(sumArray([3, 4, 5]))
+
 
 /* Define a function, as a function declaration, multiplyArray that takes an array of numbers and returns the product those numbers. For example, multiplyArray([2, 4, 5]); would return 40. */
 
