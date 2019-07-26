@@ -1,6 +1,6 @@
 
 
-/*Can I define a function expresssion outside an object and then  use this function as a call back for a key inside an object?
+/* Can I define a function expresssion outside an object and then  use this function as a call back for a key inside an object?
 
 const game = {
     title: 'Guess the Number!',
@@ -14,9 +14,11 @@ function randomNumber(smallestNum, biggestNum) {
     const range = biggestNum - smallestNum;
     const randomNum = smallestNum + ( Math.random() * (range + 1))
     return Math.floor(randomNum)
-} 
+}  
 
-console.log(randomNumber(1, 5)) */
+console.log(randomNumber(1, 5))*/
+
+
 
 const game = {
     title: 'Guess the Number!',
